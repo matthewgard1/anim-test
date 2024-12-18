@@ -1,128 +1,143 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="view-transition" content="same-origin" />
-    <title>Checkerboard - Moved Position</title>
-    <style>
-      body {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 100vh;
-        margin: 0;
-        background-color: #f0f0f0;
-      }
-      .board {
-        display: grid;
-        grid-template-columns: repeat(8, 50px);
-        grid-template-rows: repeat(8, 50px);
-        border: 2px solid #333;
-      }
-      .square {
-        width: 50px;
-        height: 50px;
-      }
-      .black {
-        background-color: #769656;
-      }
-      .white {
-        background-color: #eeeed2;
-      }
-      .piece {
-        width: 40px;
-        height: 40px;
-        border-radius: 50%;
-        background-color: #e63946;
-        margin: 5px;
-        view-transition-name: checker-piece;
-      }
-      a {
-        position: absolute;
-        bottom: 20px;
-      }
-    </style>
-  </head>
-  <body>
-    <div class="board">
-      <!-- Board squares -->
 
-      <div class="square white"></div>
-      <div class="square black"></div>
-      <div class="square white"></div>
-      <div class="square black"></div>
-      <div class="square white"></div>
-      <div class="square black"></div>
-      <div class="square white"></div>
-      <div class="square black"></div>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="view-transition" content="same-origin" />
+  <title>Checkerboard - Moved Position</title>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      background-color: #f0f0f0;
+    }
 
-      <div class="square black"></div>
-      <div class="square white"></div>
-      <div class="square black"></div>
-      <div class="square white"></div>
-      <div class="square black"></div>
-      <div class="square white"></div>
-      <div class="square black"></div>
-      <div class="square white"></div>
+    .board {
+      display: grid;
+      grid-template-columns: repeat(8, 50px);
+      grid-template-rows: repeat(8, 50px);
+      border: 2px solid #333;
+    }
 
-      <div class="square white"></div>
-      <div class="square black"></div>
-      <div class="square white"></div>
-      <div class="square black"></div>
-      <div class="square white"></div>
-      <div class="square black"></div>
-      <div class="square white"></div>
-      <div class="square black"></div>
+    .square {
+      width: 50px;
+      height: 50px;
+    }
 
-      <div class="square black"></div>
-      <div class="square white"></div>
-      <div class="square black"></div>
-      <div class="square white"></div>
-      <div class="square black"></div>
-      <div class="square white"></div>
-      <div class="square black"></div>
-      <div class="square white"></div>
+    .black {
+      background-color: #769656;
+    }
 
-      <div class="square white"></div>
-      <div class="square black"></div>
-      <div class="square white"></div>
-      <div class="square black"></div>
-      <div class="square white"></div>
-      <div class="square black"></div>
-      <div class="square white"></div>
-      <div class="square black"></div>
+    .white {
+      background-color: #eeeed2;
+    }
 
-      <div class="square black"></div>
-      <div class="square white"></div>
-      <div class="square black"></div>
-      <div class="square white"></div>
-      <div class="square black"></div>
-      <div class="square white"></div>
-      <div class="square black"></div>
-      <div class="square white"></div>
+    .piece {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background-color: #e63946;
+      margin: 5px;
+      view-transition-name: checker-piece;
+    }
 
-      <div class="square white"></div>
-      <div class="square black"></div>
-      <div class="square white"></div>
-      <div class="square black"></div>
-      <div class="square white"></div>
-      <div class="square black"></div>
-      <div class="square white"></div>
-      <div class="square black"></div>
+    a {
+      position: absolute;
+      bottom: 20px;
+    }
 
-      <div class="square black"></div>
-      <div class="square white"></div>
-      <div class="square black"></div>
-      <div class="square white"></div>
-      <div class="square black"></div>
-      <div class="square white"></div>
-      <div class="square black"></div>
-      <div class="square white"></div>
+    ::view-transition-old(circle),
+    ::view-transition-new(circle) {
+      animation-duration: 2s;
+      animation-timing-function: ease-in-out;
+    }
+  </style>
+</head>
 
-      <!-- Piece in new position -->
-      <div class="piece" style="grid-column: 6; grid-row: 6"></div>
-    </div>
-    <a href="index.html">Reset Position</a>
-  </body>
+<body>
+  <div class="board">
+    <!-- Board squares -->
+
+    <div class="square white"></div>
+    <div class="square black"></div>
+    <div class="square white"></div>
+    <div class="square black"></div>
+    <div class="square white"></div>
+    <div class="square black"></div>
+    <div class="square white"></div>
+    <div class="square black"></div>
+
+    <div class="square black"></div>
+    <div class="square white"></div>
+    <div class="square black"></div>
+    <div class="square white"></div>
+    <div class="square black"></div>
+    <div class="square white"></div>
+    <div class="square black"></div>
+    <div class="square white"></div>
+
+    <div class="square white"></div>
+    <div class="square black"></div>
+    <div class="square white"></div>
+    <div class="square black"></div>
+    <div class="square white"></div>
+    <div class="square black"></div>
+    <div class="square white"></div>
+    <div class="square black"></div>
+
+    <div class="square black"></div>
+    <div class="square white"></div>
+    <div class="square black"></div>
+    <div class="square white"></div>
+    <div class="square black"></div>
+    <div class="square white"></div>
+    <div class="square black"></div>
+    <div class="square white"></div>
+
+    <div class="square white"></div>
+    <div class="square black"></div>
+    <div class="square white"></div>
+    <div class="square black"></div>
+    <div class="square white"></div>
+    <div class="square black"></div>
+    <div class="square white"></div>
+    <div class="square black"></div>
+
+    <div class="square black"></div>
+    <div class="square white"></div>
+    <div class="square black"></div>
+    <div class="square white"></div>
+    <div class="square black"></div>
+    <div class="square white"></div>
+    <div class="square black"></div>
+    <div class="square white"></div>
+
+    <div class="square white"></div>
+    <div class="square black"></div>
+    <div class="square white"></div>
+    <div class="square black"></div>
+    <div class="square white"></div>
+    <div class="square black"></div>
+    <div class="square white"></div>
+    <div class="square black"></div>
+
+    <div class="square black"></div>
+    <div class="square white"></div>
+    <div class="square black"></div>
+    <div class="square white"></div>
+    <div class="square black"></div>
+    <div class="square white"></div>
+    <div class="square black"></div>
+    <div class="square white"></div>
+
+    <!-- Piece in new position -->
+    <div class="piece" style="grid-column: 6; grid-row: 6"></div>
+  </div>
+  <a href="index.html">Reset Position</a>
+</body>
+
 </html>
